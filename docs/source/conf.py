@@ -5,7 +5,13 @@
 
 
 # -- General Setup -----------------------------------------------------------
+import os
+import sys
 from typing import List
+
+# Modules are in repository root directory, and thus, need to be specified here
+# Enables Sphinx's autodoc capabilities when hosting on ReadtheDocs.org
+sys.path.insert(0, os.path.abspath("../.."))
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
