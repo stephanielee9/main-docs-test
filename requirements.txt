@@ -1,1 +1,1 @@
-cirq-superstaq~=0.2.4
+cirq-superstaq
