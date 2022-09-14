@@ -1,1 +1,6 @@
-cirq-superstaq
+cirq~=1.0.0
+cirq-superstaq~=0.2.4
+nbsphinx~=0.8.3
+qiskit-superstaq~=0.2.5
+sphinx~=3.5.2
+sphinx-rtd-theme~=0.5.2
