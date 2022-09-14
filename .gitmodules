@@ -1,0 +1,6 @@
+[submodule "cool-functions"]
+	path = cool-functions
+	url = https://github.com/stephanielee9/cool-functions
+[submodule "cirq-superstaq"]
+	path = cirq-superstaq
+	url = https://github.com/SupertechLabs/cirq-superstaq

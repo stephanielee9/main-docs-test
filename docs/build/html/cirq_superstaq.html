@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cirq_superstaq package &mdash; Test  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to Test’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Test
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">cirq_superstaq package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-cirq_superstaq.compiler_output">cirq_superstaq.compiler_output module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-cirq_superstaq.custom_gates">cirq_superstaq.custom_gates module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-cirq_superstaq.job">cirq_superstaq.job module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-cirq_superstaq.sampler">cirq_superstaq.sampler module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-cirq_superstaq.serialization">cirq_superstaq.serialization module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-cirq_superstaq.service">cirq_superstaq.service module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-cirq_superstaq">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Test</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>cirq_superstaq package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/cirq_superstaq.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="cirq-superstaq-package">
+<h1>cirq_superstaq package<a class="headerlink" href="#cirq-superstaq-package" title="Permalink to this heading"></a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</div>
+<div class="section" id="module-cirq_superstaq.compiler_output">
+<span id="cirq-superstaq-compiler-output-module"></span><h2>cirq_superstaq.compiler_output module<a class="headerlink" href="#module-cirq_superstaq.compiler_output" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="cirq_superstaq.compiler_output.CompilerOutput">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cirq_superstaq.compiler_output.</span></span><span class="sig-name descname"><span class="pre">CompilerOutput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pulse_sequences</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">qtrl.sequencer.Sequence</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jaqal_programs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pulse_lists</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cirq_superstaq.compiler_output.CompilerOutput" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.compiler_output.CompilerOutput.has_multiple_circuits">
+<span class="sig-name descname"><span class="pre">has_multiple_circuits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#cirq_superstaq.compiler_output.CompilerOutput.has_multiple_circuits" title="Permalink to this definition"></a></dt>
+<dd><p>Returns True if this object represents multiple circuits.</p>
+<p>If so, this object has .circuits and .pulse_lists attributes. Otherwise, this object
+represents a single circuit, and has .circuit and .pulse_list attributes.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cirq_superstaq.compiler_output.read_json_aqt">
+<span class="sig-prename descclassname"><span class="pre">cirq_superstaq.compiler_output.</span></span><span class="sig-name descname"><span class="pre">read_json_aqt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circuits_is_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cirq_superstaq.compiler_output.CompilerOutput" title="cirq_superstaq.compiler_output.CompilerOutput"><span class="pre">CompilerOutput</span></a></span></span><a class="headerlink" href="#cirq_superstaq.compiler_output.read_json_aqt" title="Permalink to this definition"></a></dt>
+<dd><p>Reads out returned JSON from SuperstaQ API’s AQT compilation endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>json_dict</strong> – a JSON dictionary matching the format returned by /aqt_compile endpoint</p></li>
+<li><p><strong>circuits_is_list</strong> – bool flag that controls whether the returned object has a .circuits
+attribute (if True) or a .circuit attribute (False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a CompilerOutput object with the compiled circuit(s). If qtrl is available locally,
+the returned object also stores the pulse sequence in the .seq attribute and the
+list(s) of cycles in the .pulse_list(s) attribute.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cirq_superstaq.compiler_output.read_json_ibmq">
+<span class="sig-prename descclassname"><span class="pre">cirq_superstaq.compiler_output.</span></span><span class="sig-name descname"><span class="pre">read_json_ibmq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circuits_is_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cirq_superstaq.compiler_output.CompilerOutput" title="cirq_superstaq.compiler_output.CompilerOutput"><span class="pre">CompilerOutput</span></a></span></span><a class="headerlink" href="#cirq_superstaq.compiler_output.read_json_ibmq" title="Permalink to this definition"></a></dt>
+<dd><p>Reads out returned JSON from SuperstaQ API’s IBMQ compilation endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>json_dict</strong> – a JSON dictionary matching the format returned by /ibmq_compile endpoint</p></li>
+<li><p><strong>circuits_is_list</strong> – bool flag that controls whether the returned object has a .circuits
+attribute (if True) or a .circuit attribute (False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a CompilerOutput object with the compiled circuit(s). If qiskit is available locally,
+the returned object also stores the pulse sequences in the .pulse_sequence(s) attribute.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cirq_superstaq.compiler_output.read_json_only_circuits">
+<span class="sig-prename descclassname"><span class="pre">cirq_superstaq.compiler_output.</span></span><span class="sig-name descname"><span class="pre">read_json_only_circuits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circuits_is_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cirq_superstaq.compiler_output.CompilerOutput" title="cirq_superstaq.compiler_output.CompilerOutput"><span class="pre">CompilerOutput</span></a></span></span><a class="headerlink" href="#cirq_superstaq.compiler_output.read_json_only_circuits" title="Permalink to this definition"></a></dt>
+<dd><p>Reads out returned JSON from SuperstaQ API’s CQ compilation endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>json_dict</strong> – a JSON dictionary matching the format returned by /cq_compile endpoint</p></li>
+<li><p><strong>circuits_is_list</strong> – bool flag that controls whether the returned object has a .circuits
+attribute (if True) or a .circuit attribute (False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a CompilerOutput object with the compiled circuit(s)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cirq_superstaq.compiler_output.read_json_qscout">
+<span class="sig-prename descclassname"><span class="pre">cirq_superstaq.compiler_output.</span></span><span class="sig-name descname"><span class="pre">read_json_qscout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circuits_is_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cirq_superstaq.compiler_output.CompilerOutput" title="cirq_superstaq.compiler_output.CompilerOutput"><span class="pre">CompilerOutput</span></a></span></span><a class="headerlink" href="#cirq_superstaq.compiler_output.read_json_qscout" title="Permalink to this definition"></a></dt>
+<dd><p>Reads out returned JSON from SuperstaQ API’s QSCOUT compilation endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>json_dict</strong> – a JSON dictionary matching the format returned by /qscout_compile endpoint</p></li>
+<li><p><strong>circuits_is_list</strong> – bool flag that controls whether the returned object has a .circuits
+attribute (if True) or a .circuit attribute (False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a CompilerOutput object with the compiled circuit(s) and a list jaqal programs
+represented as strings</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-cirq_superstaq.custom_gates">
+<span id="cirq-superstaq-custom-gates-module"></span><h2>cirq_superstaq.custom_gates module<a class="headerlink" href="#module-cirq_superstaq.custom_gates" title="Permalink to this heading"></a></h2>
+<p>Miscellaneous custom gates that we encounter and want to explicitly define.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.AceCR">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cirq_superstaq.custom_gates.</span></span><span class="sig-name descname"><span class="pre">AceCR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">polarity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sandwich_rx_rads</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cirq_superstaq.custom_gates.AceCR" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Gate</span></code></p>
+<p>Active Cancellation Echoed Cross Resonance gate, supporting polarity switches and sandwiches.</p>
+<p>The typical AceCR in literature is a positive half-CR, then X on “Z side”, then negative
+half-CR (“Z side” and “X side” refer to the two sides of the underlying ZX interactions).
+:param polarity: Should be either “+-” or “-+”. Specifies if positive or negative half-CR is first
+:param sandwich_rx_rads: Angle of rotation for an rx gate applied to the “X side” simultaneously</p>
+<blockquote>
+<div><p>with the X gate on the “Z side”.</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.AceCR.num_qubits">
+<span class="sig-name descname"><span class="pre">num_qubits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#cirq_superstaq.custom_gates.AceCR.num_qubits" title="Permalink to this definition"></a></dt>
+<dd><p>The number of qubits this gate acts on.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.Barrier">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cirq_superstaq.custom_gates.</span></span><span class="sig-name descname"><span class="pre">Barrier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_qubits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qid_shape</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cirq_superstaq.custom_gates.Barrier" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IdentityGate</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">InterchangeableQubitsGate</span></code></p>
+<p>Barrier: temporal boundary restricting circuit compilation and pulse scheduling.
+Otherwise equivalent to the identity gate.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.IXGate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cirq_superstaq.custom_gates.</span></span><span class="sig-name descname"><span class="pre">IXGate</span></span><a class="headerlink" href="#cirq_superstaq.custom_gates.IXGate" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">XPowGate</span></code></p>
+<p>Thin wrapper of Rx(-pi) to improve iToffoli circuit diagrams</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.IXGate.num_qubits">
+<span class="sig-name descname"><span class="pre">num_qubits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#cirq_superstaq.custom_gates.IXGate.num_qubits" title="Permalink to this definition"></a></dt>
+<dd><p>The number of qubits this gate acts on.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.ParallelGates">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cirq_superstaq.custom_gates.</span></span><span class="sig-name descname"><span class="pre">ParallelGates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">component_gates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Gate</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cirq_superstaq.custom_gates.ParallelGates" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Gate</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">InterchangeableQubitsGate</span></code></p>
+<p>A single Gate combining a collection of concurrent Gate(s) acting on different qubits.</p>
+<dl>
+<dt>WARNING: for cirq versions 0.14.*, equality check will return False after permutations of</dt><dd><p>qubits between identical but nonadjacent gates, e.g.:</p>
+<blockquote>
+<div><p>gate = ParallelGates(cirq.X, cirq.Y, cirq.X)
+gate.on(q0, q1, q2) == gate.on(q2, q1, q0)  # True for cirq &lt; 0.14.0</p>
+<blockquote>
+<div><p># False for 0.14.0 &lt;= cirq &lt; 0.15.0
+# True for cirq &gt;= 0.15.0</p>
+</div></blockquote>
+</div></blockquote>
+<p>This does not affect permutations of qubits between adjacent gates, or those within the
+same InterchangeableQubitsGate:</p>
+<blockquote>
+<div><p>gate = ParallelGates(cirq.X, cirq.X, cirq.CZ)
+gate.on(q0, q1, q2, q3) == gate.on(q1, q0, q3, q2)  # always True</p>
+</div></blockquote>
+<p>See <a class="reference external" href="https://github.com/quantumlib/Cirq/issues/5148">https://github.com/quantumlib/Cirq/issues/5148</a> for more information.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.ParallelGates.num_qubits">
+<span class="sig-name descname"><span class="pre">num_qubits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#cirq_superstaq.custom_gates.ParallelGates.num_qubits" title="Permalink to this definition"></a></dt>
+<dd><p>The number of qubits this gate acts on.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.ParallelGates.qubit_index_to_equivalence_group_key">
+<span class="sig-name descname"><span class="pre">qubit_index_to_equivalence_group_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#cirq_superstaq.custom_gates.ParallelGates.qubit_index_to_equivalence_group_key" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a key that differs between non-interchangeable qubits.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.ParallelGates.qubit_index_to_gate_and_index">
+<span class="sig-name descname"><span class="pre">qubit_index_to_gate_and_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Gate</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cirq_superstaq.custom_gates.ParallelGates.qubit_index_to_gate_and_index" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.ParallelRGate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cirq_superstaq.custom_gates.</span></span><span class="sig-name descname"><span class="pre">ParallelRGate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_copies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cirq_superstaq.custom_gates.ParallelRGate" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ParallelGate</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">InterchangeableQubitsGate</span></code></p>
+<p>Wrapper class to define a ParallelGate of identical RGate gates.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.ParallelRGate.exponent">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">exponent</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#cirq_superstaq.custom_gates.ParallelRGate.exponent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.ParallelRGate.phase_exponent">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">phase_exponent</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#cirq_superstaq.custom_gates.ParallelRGate.phase_exponent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.ParallelRGate.phi">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">phi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#cirq_superstaq.custom_gates.ParallelRGate.phi" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.ParallelRGate.sub_gate">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sub_gate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#cirq_superstaq.custom_gates.RGate" title="cirq_superstaq.custom_gates.RGate"><span class="pre">RGate</span></a></em><a class="headerlink" href="#cirq_superstaq.custom_gates.ParallelRGate.sub_gate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.ParallelRGate.theta">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">theta</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#cirq_superstaq.custom_gates.ParallelRGate.theta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.RGate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cirq_superstaq.custom_gates.</span></span><span class="sig-name descname"><span class="pre">RGate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cirq_superstaq.custom_gates.RGate" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PhasedXPowGate</span></code></p>
+<p>A single-qubit gate that rotates about an axis in the X-Y plane.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.RGate.num_qubits">
+<span class="sig-name descname"><span class="pre">num_qubits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#cirq_superstaq.custom_gates.RGate.num_qubits" title="Permalink to this definition"></a></dt>
+<dd><p>The number of qubits this gate acts on.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.RGate.phi">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">phi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#cirq_superstaq.custom_gates.RGate.phi" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.RGate.theta">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">theta</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#cirq_superstaq.custom_gates.RGate.theta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.ZXPowGate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cirq_superstaq.custom_gates.</span></span><span class="sig-name descname"><span class="pre">ZXPowGate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exponent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Basic</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_shift</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cirq_superstaq.custom_gates.ZXPowGate" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">EigenGate</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Gate</span></code></p>
+<p>The ZX-parity gate, possibly raised to a power.
+Per arxiv.org/pdf/1904.06560v3 eq. 135, the ZX**t gate implements the following unitary:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\begin{split}e^{-\frac{i\pi}{2} t Z \otimes X} = \begin{bmatrix}
+                                c &amp; -s &amp; . &amp; . \\
+                                -s &amp; c &amp; . &amp; . \\
+                                . &amp; . &amp; c &amp; s \\
+                                . &amp; . &amp; s &amp; c \\
+                                \end{bmatrix}\end{split}\]</div>
+</div></blockquote>
+<p>where ‘.’ means ‘0’ and <span class="math notranslate nohighlight">\(c = \cos(\frac{\pi t}{2})\)</span>
+and <span class="math notranslate nohighlight">\(s = i \sin(\frac{\pi t}{2})\)</span>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.ZXPowGate.num_qubits">
+<span class="sig-name descname"><span class="pre">num_qubits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#cirq_superstaq.custom_gates.ZXPowGate.num_qubits" title="Permalink to this definition"></a></dt>
+<dd><p>The number of qubits this gate acts on.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.ZZSwapGate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cirq_superstaq.custom_gates.</span></span><span class="sig-name descname"><span class="pre">ZZSwapGate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Basic</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cirq_superstaq.custom_gates.ZZSwapGate" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Gate</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">InterchangeableQubitsGate</span></code></p>
+<p>The ZZ-SWAP gate, which performs the ZZ-interaction followed by a SWAP.</p>
+<p>ZZ-SWAPs are useful for applications like QAOA or Hamiltonian Simulation,
+particularly on linear- or low- connectivity devices. See <a class="reference external" href="https://arxiv.org/pdf/2004.14970.pdf">https://arxiv.org/pdf/2004.14970.pdf</a>
+for an application of ZZ SWAP networks.</p>
+<p>The unitary for a ZZ-SWAP gate parametrized by ZZ-interaction angle <span class="math notranslate nohighlight">\(\theta\)</span> is:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+1 &amp; . &amp; . &amp; . \\
+. &amp; . &amp; e^{i \theta} &amp; . \\
+. &amp; e^{i \theta} &amp; . &amp; . \\
+. &amp; . &amp; . &amp; 1 \\
+\end{bmatrix}\end{split}\]</div>
+</div></blockquote>
+<p>where ‘.’ means ‘0’.
+For <span class="math notranslate nohighlight">\(\theta = 0\)</span>, the ZZ-SWAP gate is just an ordinary SWAP.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.ZZSwapGate.num_qubits">
+<span class="sig-name descname"><span class="pre">num_qubits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#cirq_superstaq.custom_gates.ZZSwapGate.num_qubits" title="Permalink to this definition"></a></dt>
+<dd><p>The number of qubits this gate acts on.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.barrier">
+<span class="sig-prename descclassname"><span class="pre">cirq_superstaq.custom_gates.</span></span><span class="sig-name descname"><span class="pre">barrier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">qubits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Qid</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Operation</span></span></span><a class="headerlink" href="#cirq_superstaq.custom_gates.barrier" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cirq_superstaq.custom_gates.custom_resolver">
+<span class="sig-prename descclassname"><span class="pre">cirq_superstaq.custom_gates.</span></span><span class="sig-name descname"><span class="pre">custom_resolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cirq_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Gate</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cirq_superstaq.custom_gates.custom_resolver" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-cirq_superstaq.job">
+<span id="cirq-superstaq-job-module"></span><h2>cirq_superstaq.job module<a class="headerlink" href="#module-cirq_superstaq.job" title="Permalink to this heading"></a></h2>
+<p>Represents a job created via the SuperstaQ API.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="cirq_superstaq.job.Job">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cirq_superstaq.job.</span></span><span class="sig-name descname"><span class="pre">Job</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_SuperstaQClient</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">job_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cirq_superstaq.job.Job" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A job created on the SuperstaQ API.</p>
+<p>Note that this is mutable, when calls to get status or results are made
+the job updates itself to the results returned from the API.</p>
+<p>If a job is canceled or deleted, only the job id and the status remain
+valid.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cirq_superstaq.job.Job.ALL_STATES">
+<span class="sig-name descname"><span class="pre">ALL_STATES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('Done',</span> <span class="pre">'Canceled',</span> <span class="pre">'Failed',</span> <span class="pre">'Deleted',</span> <span class="pre">'Ready',</span> <span class="pre">'Submitted',</span> <span class="pre">'Running')</span></em><a class="headerlink" href="#cirq_superstaq.job.Job.ALL_STATES" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cirq_superstaq.job.Job.NON_TERMINAL_STATES">
+<span class="sig-name descname"><span class="pre">NON_TERMINAL_STATES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('Ready',</span> <span class="pre">'Submitted',</span> <span class="pre">'Running')</span></em><a class="headerlink" href="#cirq_superstaq.job.Job.NON_TERMINAL_STATES" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cirq_superstaq.job.Job.TERMINAL_STATES">
+<span class="sig-name descname"><span class="pre">TERMINAL_STATES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('Done',</span> <span class="pre">'Canceled',</span> <span class="pre">'Failed',</span> <span class="pre">'Deleted')</span></em><a class="headerlink" href="#cirq_superstaq.job.Job.TERMINAL_STATES" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cirq_superstaq.job.Job.UNSUCCESSFUL_STATES">
+<span class="sig-name descname"><span class="pre">UNSUCCESSFUL_STATES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('Canceled',</span> <span class="pre">'Failed',</span> <span class="pre">'Deleted')</span></em><a class="headerlink" href="#cirq_superstaq.job.Job.UNSUCCESSFUL_STATES" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.job.Job.counts">
+<span class="sig-name descname"><span class="pre">counts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout_seconds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">7200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">polling_seconds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Counter</span></span></span><a class="headerlink" href="#cirq_superstaq.job.Job.counts" title="Permalink to this definition"></a></dt>
+<dd><p>Polls the SuperstaQ API for results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeout_seconds</strong> – The total number of seconds to poll for.</p></li>
+<li><p><strong>polling_seconds</strong> – The interval with which to poll.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>collections.Counter that represents the results of the measurements</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>SuperstaQUnsuccessfulJob</strong> – If the job has failed, been canceled, or deleted.</p></li>
+<li><p><strong>SuperstaQException</strong> – If unable to get the results from the API.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.job.Job.job_id">
+<span class="sig-name descname"><span class="pre">job_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#cirq_superstaq.job.Job.job_id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the job id (UID) for the job.</p>
+<p>This is the id used for identifying the job by the API.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.job.Job.num_qubits">
+<span class="sig-name descname"><span class="pre">num_qubits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#cirq_superstaq.job.Job.num_qubits" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the number of qubits for the job.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>SuperstaQUnsuccessfulJob</strong> – If the job has failed, been canceled, or deleted.</p></li>
+<li><p><strong>SuperstaQException</strong> – If unable to get the status of the job from the API.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.job.Job.repetitions">
+<span class="sig-name descname"><span class="pre">repetitions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#cirq_superstaq.job.Job.repetitions" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the number of repetitions for the job.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>SuperstaQUnsuccessfulJob</strong> – If the job has failed, been canceled, or deleted.</p></li>
+<li><p><strong>SuperstaQException</strong> – If unable to get the status of the job from the API.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.job.Job.status">
+<span class="sig-name descname"><span class="pre">status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#cirq_superstaq.job.Job.status" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the current status of the job.</p>
+<p>If the current job is in a non-terminal state,
+this will update the job and return the current status.
+A full list of states is given in
+<cite>cirq_superstaq.Job.ALL_STATES</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>SuperstaQException</strong> – If the API is not able to get the status of the job.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The job status.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.job.Job.target">
+<span class="sig-name descname"><span class="pre">target</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#cirq_superstaq.job.Job.target" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the target where the job is to be run, or was run.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>‘qpu’ or ‘simulator’ depending on where the job was run or is running.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>SuperstaQUnsuccessfulJob</strong> – If the job has failed, been canceled, or deleted.</p></li>
+<li><p><strong>SuperstaQException</strong> – If unable to get the status of the job from the API.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-cirq_superstaq.sampler">
+<span id="cirq-superstaq-sampler-module"></span><h2>cirq_superstaq.sampler module<a class="headerlink" href="#module-cirq_superstaq.sampler" title="Permalink to this heading"></a></h2>
+<p>A <cite>cirq.Sampler</cite> implementation for the SuperstaQ API.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="cirq_superstaq.sampler.Sampler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cirq_superstaq.sampler.</span></span><span class="sig-name descname"><span class="pre">Sampler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">service</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cirq_superstaq.service.Service" title="cirq_superstaq.service.Service"><span class="pre">Service</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cirq_superstaq.sampler.Sampler" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Sampler</span></code></p>
+<p>A sampler that works against the SuperstaQ API. Users should get a sampler from the <cite>sampler</cite>
+method on <cite>css.Service</cite>.</p>
+<p class="rubric">Example</p>
+<p>&gt;&gt; service = css.Service(…)
+&gt;&gt; q0, q1 = cirq.LineQubit.range(2)
+&gt;&gt; sampler = service.sampler()
+&gt;&gt; circuit = cirq.Circuit(cirq.H(q0), cirq.CNOT(q0, q1), cirq.measure(q0))
+&gt;&gt; print(sampler.sample(circuit, repetitions=5))</p>
+<blockquote>
+<div><p>0</p>
+</div></blockquote>
+<p>0   0
+1   0
+2   0
+3   1
+4   1</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.sampler.Sampler.run_sweep">
+<span class="sig-name descname"><span class="pre">run_sweep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">program</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AbstractCircuit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">ParamResolver</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Basic</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Basic</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Sweep</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">_Sweepable</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repetitions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">ResultDict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cirq_superstaq.sampler.Sampler.run_sweep" title="Permalink to this definition"></a></dt>
+<dd><p>Runs a sweep for the given Circuit. Note that this creates jobs for each of the sweeps in
+the given sweepable, and then blocks until all of jobs are complete.</p>
+<dl class="simple">
+<dt>Ags:</dt><dd><p>program: The circuit to sample from.
+params: The parameters to run with program.
+repetitions: The number of times to sample.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A list of Cirq results, one for each parameter resolver.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-cirq_superstaq.serialization">
+<span id="cirq-superstaq-serialization-module"></span><h2>cirq_superstaq.serialization module<a class="headerlink" href="#module-cirq_superstaq.serialization" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="cirq_superstaq.serialization.deserialize_circuits">
+<span class="sig-prename descclassname"><span class="pre">cirq_superstaq.serialization.</span></span><span class="sig-name descname"><span class="pre">deserialize_circuits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">serialized_circuits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cirq_superstaq.serialization.deserialize_circuits" title="Permalink to this definition"></a></dt>
+<dd><p>Deserialize serialized Circuit(s)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>serialized_circuits</strong> – json str generated via converters.serialize_circuit()</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the Circuit or list of Circuits that was serialized</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cirq_superstaq.serialization.serialize_circuits">
+<span class="sig-prename descclassname"><span class="pre">cirq_superstaq.serialization.</span></span><span class="sig-name descname"><span class="pre">serialize_circuits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">AbstractCircuit</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">AbstractCircuit</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#cirq_superstaq.serialization.serialize_circuits" title="Permalink to this definition"></a></dt>
+<dd><p>Serialize Circuit(s) into a json string</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>circuits</strong> – a Circuit or list of Circuits to be serialized</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>str representing the serialized circuit(s)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-cirq_superstaq.service">
+<span id="cirq-superstaq-service-module"></span><h2>cirq_superstaq.service module<a class="headerlink" href="#module-cirq_superstaq.service" title="Permalink to this heading"></a></h2>
+<p>Service to access SuperstaQs API.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="cirq_superstaq.service.Service">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cirq_superstaq.service.</span></span><span class="sig-name descname"><span class="pre">Service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_host</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'v0.1.0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_retry_seconds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3600</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cirq_superstaq.service.Service" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Finance</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Logistics</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">UserConfig</span></code></p>
+<p>A class to access SuperstaQ’s API.</p>
+<p>To access the API, this class requires a remote host url and an API key. These can be
+specified in the constructor via the parameters <cite>remote_host</cite> and <cite>api_key</cite>. Alternatively
+these can be specified by setting the environment variables <cite>SUPERSTAQ_REMOTE_HOST</cite> and
+<cite>SUPERSTAQ_API_KEY</cite>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.service.Service.aqt_compile">
+<span class="sig-name descname"><span class="pre">aqt_compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'aqt_keysight_qpu'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cirq_superstaq.compiler_output.CompilerOutput" title="cirq_superstaq.compiler_output.CompilerOutput"><span class="pre">CompilerOutput</span></a></span></span><a class="headerlink" href="#cirq_superstaq.service.Service.aqt_compile" title="Permalink to this definition"></a></dt>
+<dd><p>Compiles the given circuit(s) to target AQT device, optimized to its native gate set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>circuits</strong> – cirq Circuit(s) to compile.</p></li>
+<li><p><strong>target</strong> – string of target backend AQT device.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>object whose .circuit(s) attribute is an optimized cirq Circuit(s)
+If qtrl is installed, the object’s .seq attribute is a qtrl Sequence object of the
+pulse sequence corresponding to the optimized cirq.Circuit(s) and the
+.pulse_list(s) attribute is the list(s) of cycles.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.service.Service.aqt_compile_eca">
+<span class="sig-name descname"><span class="pre">aqt_compile_eca</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Circuit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_equivalent_circuits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'aqt_keysight_qpu'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cirq_superstaq.compiler_output.CompilerOutput" title="cirq_superstaq.compiler_output.CompilerOutput"><span class="pre">CompilerOutput</span></a></span></span><a class="headerlink" href="#cirq_superstaq.service.Service.aqt_compile_eca" title="Permalink to this definition"></a></dt>
+<dd><p>Compiles the given circuit to target AQT device with Equivalent Circuit Averaging (ECA).</p>
+<p>See arxiv.org/pdf/2111.04572.pdf for a description of ECA.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>circuit</strong> – cirq Circuit to compile.</p></li>
+<li><p><strong>num_equivalent_circuits</strong> – number of logically equivalent random circuits to generate.</p></li>
+<li><p><strong>random_seed</strong> – optional seed for circuit randomizer.</p></li>
+<li><p><strong>target</strong> – string of target backend AQT device.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>object whose .circuits attribute is a list of logically equivalent cirq Circuit(s).
+If qtrl is installed, the object’s .seq attribute is a qtrl Sequence object of the
+pulse sequence corresponding to the cirq.Circuits and the .pulse_list(s) attribute is
+the list(s) of cycles.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.service.Service.cq_compile">
+<span class="sig-name descname"><span class="pre">cq_compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'cq_hilbert_qpu'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cirq_superstaq.compiler_output.CompilerOutput" title="cirq_superstaq.compiler_output.CompilerOutput"><span class="pre">CompilerOutput</span></a></span></span><a class="headerlink" href="#cirq_superstaq.service.Service.cq_compile" title="Permalink to this definition"></a></dt>
+<dd><p>Compiles the given circuit(s) to given target CQ device, optimized to its native gate
+set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>circuits</strong> – cirq Circuit(s) with operations on qubits 0 and 1.</p></li>
+<li><p><strong>target</strong> – string of target backend CQ device.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>object whose .circuit(s) attribute is an optimized cirq Circuit(s)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.service.Service.create_job">
+<span class="sig-name descname"><span class="pre">create_job</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AbstractCircuit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repetitions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ibmq_pulse</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cirq_superstaq.job.Job" title="cirq_superstaq.job.Job"><span class="pre">Job</span></a></span></span><a class="headerlink" href="#cirq_superstaq.service.Service.create_job" title="Permalink to this definition"></a></dt>
+<dd><p>Create a new job to run the given circuit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>circuit</strong> – The circuit to run.</p></li>
+<li><p><strong>repetitions</strong> – The number of times to repeat the circuit. Defaults to 1000.</p></li>
+<li><p><strong>target</strong> – Where to run the job.</p></li>
+<li><p><strong>ibmq_pulse</strong> – Specify whether to run the job using SuperstaQ’s pulse-level optimizations.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>css.Job</cite> which can be queried for status or results.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ValueError</strong> – If the circuit has no measurements to sample.</p></li>
+<li><p><strong>SuperstaQException</strong> – If there was an error accessing the API.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.service.Service.get_backends">
+<span class="sig-name descname"><span class="pre">get_backends</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#cirq_superstaq.service.Service.get_backends" title="Permalink to this definition"></a></dt>
+<dd><p>Get list of available backends.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.service.Service.get_balance">
+<span class="sig-name descname"><span class="pre">get_balance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretty_output</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cirq_superstaq.service.Service.get_balance" title="Permalink to this definition"></a></dt>
+<dd><p>Get the querying user’s account balance in USD.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pretty_output</strong> – whether to return a pretty string or a float of the balance.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>If pretty_output is True, returns the balance as a nicely formatted string ($-prefix,</dt><dd><p>commas on LHS every three digits, and two digits after period). Otherwise, simply
+returns a float of the balance.</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.service.Service.get_counts">
+<span class="sig-name descname"><span class="pre">get_counts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Circuit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repetitions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ibmq_pulse</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_resolver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">ParamResolver</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Basic</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Basic</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">cirq.ParamResolver({})</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Counter</span></span></span><a class="headerlink" href="#cirq_superstaq.service.Service.get_counts" title="Permalink to this definition"></a></dt>
+<dd><p>Runs the given circuit on the SuperstaQ API and returns the result
+of the ran circuit as a collections.Counter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>circuit</strong> – The circuit to run.</p></li>
+<li><p><strong>repetitions</strong> – The number of times to run the circuit.</p></li>
+<li><p><strong>target</strong> – Where to run the job.</p></li>
+<li><p><strong>param_resolver</strong> – A <cite>cirq.ParamResolver</cite> to resolve parameters in  <cite>circuit</cite>.</p></li>
+<li><p><strong>ibmq_pulse</strong> – Specify whether to run the job using SuperstaQ’s pulse-level optimizations.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>collection.Counter</cite> for running the circuit.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.service.Service.get_job">
+<span class="sig-name descname"><span class="pre">get_job</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">job_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cirq_superstaq.job.Job" title="cirq_superstaq.job.Job"><span class="pre">Job</span></a></span></span><a class="headerlink" href="#cirq_superstaq.service.Service.get_job" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a job that has been created on the SuperstaQ API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>job_id</strong> – The UUID of the job. Jobs are assigned these numbers by the server during the</p></li>
+<li><p><strong>job.</strong> (<em>creation of the</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>css.Job</cite> which can be queried for status or results.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>SuperstaQNotFoundException</strong> – If there was no job with the given <cite>job_id</cite>.</p></li>
+<li><p><strong>SuperstaQException</strong> – If there was an error accessing the API.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.service.Service.ibmq_compile">
+<span class="sig-name descname"><span class="pre">ibmq_compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ibmq_qasm_simulator'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cirq_superstaq.compiler_output.CompilerOutput" title="cirq_superstaq.compiler_output.CompilerOutput"><span class="pre">CompilerOutput</span></a></span></span><a class="headerlink" href="#cirq_superstaq.service.Service.ibmq_compile" title="Permalink to this definition"></a></dt>
+<dd><p>Returns pulse schedule for the given circuit and target.</p>
+<p>Qiskit Terra must be installed to correctly deserialize the returned pulse schedule.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.service.Service.neutral_atom_compile">
+<span class="sig-name descname"><span class="pre">neutral_atom_compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'neutral_atom_qpu'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#cirq_superstaq.service.Service.neutral_atom_compile" title="Permalink to this definition"></a></dt>
+<dd><p>Returns pulse schedule for the given circuit and target.</p>
+<p>Pulse must be installed for returned object to correctly deserialize to a pulse schedule.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.service.Service.qscout_compile">
+<span class="sig-name descname"><span class="pre">qscout_compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirror_swaps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'sandia_qscout_qpu'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cirq_superstaq.compiler_output.CompilerOutput" title="cirq_superstaq.compiler_output.CompilerOutput"><span class="pre">CompilerOutput</span></a></span></span><a class="headerlink" href="#cirq_superstaq.service.Service.qscout_compile" title="Permalink to this definition"></a></dt>
+<dd><p>Compiles the given circuit(s) to target QSCOUT device, optimized to its native gate set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>circuits</strong> – cirq Circuit(s) with operations on qubits 0 and 1.</p></li>
+<li><p><strong>target</strong> – string of target backend QSCOUT device.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>object whose .circuit(s) attribute is an optimized cirq Circuit(s)
+and a list of jaqal programs represented as strings</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.service.Service.resource_estimate">
+<span class="sig-name descname"><span class="pre">resource_estimate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">ResourceEstimate</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">ResourceEstimate</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cirq_superstaq.service.Service.resource_estimate" title="Permalink to this definition"></a></dt>
+<dd><p>Generates resource estimates for circuit(s).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>circuits</strong> – cirq Circuit(s).</p></li>
+<li><p><strong>target</strong> – string of target representing backend device</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ResourceEstimate(s) containing resource costs (after compilation)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.service.Service.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Circuit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repetitions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ibmq_pulse</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_resolver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ParamResolver</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">cirq.ParamResolver({})</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ResultDict</span></span></span><a class="headerlink" href="#cirq_superstaq.service.Service.run" title="Permalink to this definition"></a></dt>
+<dd><p>Run the given circuit on the SuperstaQ API and returns the result
+of the ran circut as a cirq.ResultDict.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>circuit</strong> – The circuit to run.</p></li>
+<li><p><strong>repetitions</strong> – The number of times to run the circuit.</p></li>
+<li><p><strong>target</strong> – Where to run the job.</p></li>
+<li><p><strong>ibmq_pulse</strong> – Specify whether to run the job using SuperstaQ’s pulse-level optimizations.</p></li>
+<li><p><strong>param_resolver</strong> – A <cite>cirq.ParamResolver</cite> to resolve parameters in  <cite>circuit</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>cirq.ResultDict</cite> for running the circuit.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.service.Service.sampler">
+<span class="sig-name descname"><span class="pre">sampler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Sampler</span></span></span><a class="headerlink" href="#cirq_superstaq.service.Service.sampler" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a <cite>cirq.Sampler</cite> object for accessing sampler interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>target</strong> – Backend to sample against.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>cirq.Sampler</cite> for the SuperstaQ API.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cirq_superstaq.service.counts_to_results">
+<span class="sig-prename descclassname"><span class="pre">cirq_superstaq.service.</span></span><span class="sig-name descname"><span class="pre">counts_to_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">counter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Counter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circuit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AbstractCircuit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_resolver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ParamResolver</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ResultDict</span></span></span><a class="headerlink" href="#cirq_superstaq.service.counts_to_results" title="Permalink to this definition"></a></dt>
+<dd><p>Converts a collections.Counter to a cirq.ResultDict.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>counter</strong> – The collections.Counter of counts for the run.</p></li>
+<li><p><strong>circuit</strong> – The circuit to run.</p></li>
+<li><p><strong>param_resolver</strong> – <p>A <cite>cirq.ParamResolver</cite> to resolve parameters in <cite>circuit</cite>.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>A <cite>cirq.ResultDict</cite> for the given circuit and counter.</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-cirq_superstaq">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-cirq_superstaq" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="cirq_superstaq.AceCR">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cirq_superstaq.</span></span><span class="sig-name descname"><span class="pre">AceCR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">polarity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sandwich_rx_rads</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cirq_superstaq.AceCR" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Gate</span></code></p>
+<p>Active Cancellation Echoed Cross Resonance gate, supporting polarity switches and sandwiches.</p>
+<p>The typical AceCR in literature is a positive half-CR, then X on “Z side”, then negative
+half-CR (“Z side” and “X side” refer to the two sides of the underlying ZX interactions).
+:param polarity: Should be either “+-” or “-+”. Specifies if positive or negative half-CR is first
+:param sandwich_rx_rads: Angle of rotation for an rx gate applied to the “X side” simultaneously</p>
+<blockquote>
+<div><p>with the X gate on the “Z side”.</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.AceCR.num_qubits">
+<span class="sig-name descname"><span class="pre">num_qubits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#cirq_superstaq.AceCR.num_qubits" title="Permalink to this definition"></a></dt>
+<dd><p>The number of qubits this gate acts on.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cirq_superstaq.Barrier">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cirq_superstaq.</span></span><span class="sig-name descname"><span class="pre">Barrier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_qubits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qid_shape</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cirq_superstaq.Barrier" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IdentityGate</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">InterchangeableQubitsGate</span></code></p>
+<p>Barrier: temporal boundary restricting circuit compilation and pulse scheduling.
+Otherwise equivalent to the identity gate.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cirq_superstaq.Job">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cirq_superstaq.</span></span><span class="sig-name descname"><span class="pre">Job</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_SuperstaQClient</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">job_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cirq_superstaq.Job" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A job created on the SuperstaQ API.</p>
+<p>Note that this is mutable, when calls to get status or results are made
+the job updates itself to the results returned from the API.</p>
+<p>If a job is canceled or deleted, only the job id and the status remain
+valid.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cirq_superstaq.Job.ALL_STATES">
+<span class="sig-name descname"><span class="pre">ALL_STATES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('Done',</span> <span class="pre">'Canceled',</span> <span class="pre">'Failed',</span> <span class="pre">'Deleted',</span> <span class="pre">'Ready',</span> <span class="pre">'Submitted',</span> <span class="pre">'Running')</span></em><a class="headerlink" href="#cirq_superstaq.Job.ALL_STATES" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cirq_superstaq.Job.NON_TERMINAL_STATES">
+<span class="sig-name descname"><span class="pre">NON_TERMINAL_STATES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('Ready',</span> <span class="pre">'Submitted',</span> <span class="pre">'Running')</span></em><a class="headerlink" href="#cirq_superstaq.Job.NON_TERMINAL_STATES" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cirq_superstaq.Job.TERMINAL_STATES">
+<span class="sig-name descname"><span class="pre">TERMINAL_STATES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('Done',</span> <span class="pre">'Canceled',</span> <span class="pre">'Failed',</span> <span class="pre">'Deleted')</span></em><a class="headerlink" href="#cirq_superstaq.Job.TERMINAL_STATES" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cirq_superstaq.Job.UNSUCCESSFUL_STATES">
+<span class="sig-name descname"><span class="pre">UNSUCCESSFUL_STATES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('Canceled',</span> <span class="pre">'Failed',</span> <span class="pre">'Deleted')</span></em><a class="headerlink" href="#cirq_superstaq.Job.UNSUCCESSFUL_STATES" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.Job.counts">
+<span class="sig-name descname"><span class="pre">counts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout_seconds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">7200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">polling_seconds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Counter</span></span></span><a class="headerlink" href="#cirq_superstaq.Job.counts" title="Permalink to this definition"></a></dt>
+<dd><p>Polls the SuperstaQ API for results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeout_seconds</strong> – The total number of seconds to poll for.</p></li>
+<li><p><strong>polling_seconds</strong> – The interval with which to poll.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>collections.Counter that represents the results of the measurements</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>SuperstaQUnsuccessfulJob</strong> – If the job has failed, been canceled, or deleted.</p></li>
+<li><p><strong>SuperstaQException</strong> – If unable to get the results from the API.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.Job.job_id">
+<span class="sig-name descname"><span class="pre">job_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#cirq_superstaq.Job.job_id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the job id (UID) for the job.</p>
+<p>This is the id used for identifying the job by the API.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.Job.num_qubits">
+<span class="sig-name descname"><span class="pre">num_qubits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#cirq_superstaq.Job.num_qubits" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the number of qubits for the job.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>SuperstaQUnsuccessfulJob</strong> – If the job has failed, been canceled, or deleted.</p></li>
+<li><p><strong>SuperstaQException</strong> – If unable to get the status of the job from the API.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.Job.repetitions">
+<span class="sig-name descname"><span class="pre">repetitions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#cirq_superstaq.Job.repetitions" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the number of repetitions for the job.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>SuperstaQUnsuccessfulJob</strong> – If the job has failed, been canceled, or deleted.</p></li>
+<li><p><strong>SuperstaQException</strong> – If unable to get the status of the job from the API.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.Job.status">
+<span class="sig-name descname"><span class="pre">status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#cirq_superstaq.Job.status" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the current status of the job.</p>
+<p>If the current job is in a non-terminal state,
+this will update the job and return the current status.
+A full list of states is given in
+<cite>cirq_superstaq.Job.ALL_STATES</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>SuperstaQException</strong> – If the API is not able to get the status of the job.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The job status.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.Job.target">
+<span class="sig-name descname"><span class="pre">target</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#cirq_superstaq.Job.target" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the target where the job is to be run, or was run.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>‘qpu’ or ‘simulator’ depending on where the job was run or is running.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>SuperstaQUnsuccessfulJob</strong> – If the job has failed, been canceled, or deleted.</p></li>
+<li><p><strong>SuperstaQException</strong> – If unable to get the status of the job from the API.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cirq_superstaq.ParallelGates">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cirq_superstaq.</span></span><span class="sig-name descname"><span class="pre">ParallelGates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">component_gates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Gate</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cirq_superstaq.ParallelGates" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Gate</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">InterchangeableQubitsGate</span></code></p>
+<p>A single Gate combining a collection of concurrent Gate(s) acting on different qubits.</p>
+<dl>
+<dt>WARNING: for cirq versions 0.14.*, equality check will return False after permutations of</dt><dd><p>qubits between identical but nonadjacent gates, e.g.:</p>
+<blockquote>
+<div><p>gate = ParallelGates(cirq.X, cirq.Y, cirq.X)
+gate.on(q0, q1, q2) == gate.on(q2, q1, q0)  # True for cirq &lt; 0.14.0</p>
+<blockquote>
+<div><p># False for 0.14.0 &lt;= cirq &lt; 0.15.0
+# True for cirq &gt;= 0.15.0</p>
+</div></blockquote>
+</div></blockquote>
+<p>This does not affect permutations of qubits between adjacent gates, or those within the
+same InterchangeableQubitsGate:</p>
+<blockquote>
+<div><p>gate = ParallelGates(cirq.X, cirq.X, cirq.CZ)
+gate.on(q0, q1, q2, q3) == gate.on(q1, q0, q3, q2)  # always True</p>
+</div></blockquote>
+<p>See <a class="reference external" href="https://github.com/quantumlib/Cirq/issues/5148">https://github.com/quantumlib/Cirq/issues/5148</a> for more information.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.ParallelGates.num_qubits">
+<span class="sig-name descname"><span class="pre">num_qubits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#cirq_superstaq.ParallelGates.num_qubits" title="Permalink to this definition"></a></dt>
+<dd><p>The number of qubits this gate acts on.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.ParallelGates.qubit_index_to_equivalence_group_key">
+<span class="sig-name descname"><span class="pre">qubit_index_to_equivalence_group_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#cirq_superstaq.ParallelGates.qubit_index_to_equivalence_group_key" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a key that differs between non-interchangeable qubits.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.ParallelGates.qubit_index_to_gate_and_index">
+<span class="sig-name descname"><span class="pre">qubit_index_to_gate_and_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Gate</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cirq_superstaq.ParallelGates.qubit_index_to_gate_and_index" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cirq_superstaq.ParallelRGate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cirq_superstaq.</span></span><span class="sig-name descname"><span class="pre">ParallelRGate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_copies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cirq_superstaq.ParallelRGate" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ParallelGate</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">InterchangeableQubitsGate</span></code></p>
+<p>Wrapper class to define a ParallelGate of identical RGate gates.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="cirq_superstaq.ParallelRGate.exponent">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">exponent</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#cirq_superstaq.ParallelRGate.exponent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cirq_superstaq.ParallelRGate.phase_exponent">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">phase_exponent</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#cirq_superstaq.ParallelRGate.phase_exponent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cirq_superstaq.ParallelRGate.phi">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">phi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#cirq_superstaq.ParallelRGate.phi" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cirq_superstaq.ParallelRGate.sub_gate">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sub_gate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#cirq_superstaq.custom_gates.RGate" title="cirq_superstaq.custom_gates.RGate"><span class="pre">RGate</span></a></em><a class="headerlink" href="#cirq_superstaq.ParallelRGate.sub_gate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cirq_superstaq.ParallelRGate.theta">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">theta</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#cirq_superstaq.ParallelRGate.theta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cirq_superstaq.RGate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cirq_superstaq.</span></span><span class="sig-name descname"><span class="pre">RGate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cirq_superstaq.RGate" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PhasedXPowGate</span></code></p>
+<p>A single-qubit gate that rotates about an axis in the X-Y plane.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.RGate.num_qubits">
+<span class="sig-name descname"><span class="pre">num_qubits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#cirq_superstaq.RGate.num_qubits" title="Permalink to this definition"></a></dt>
+<dd><p>The number of qubits this gate acts on.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cirq_superstaq.RGate.phi">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">phi</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#cirq_superstaq.RGate.phi" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cirq_superstaq.RGate.theta">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">theta</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#cirq_superstaq.RGate.theta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cirq_superstaq.Sampler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cirq_superstaq.</span></span><span class="sig-name descname"><span class="pre">Sampler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">service</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cirq_superstaq.service.Service" title="cirq_superstaq.service.Service"><span class="pre">Service</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cirq_superstaq.Sampler" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Sampler</span></code></p>
+<p>A sampler that works against the SuperstaQ API. Users should get a sampler from the <cite>sampler</cite>
+method on <cite>css.Service</cite>.</p>
+<p class="rubric">Example</p>
+<p>&gt;&gt; service = css.Service(…)
+&gt;&gt; q0, q1 = cirq.LineQubit.range(2)
+&gt;&gt; sampler = service.sampler()
+&gt;&gt; circuit = cirq.Circuit(cirq.H(q0), cirq.CNOT(q0, q1), cirq.measure(q0))
+&gt;&gt; print(sampler.sample(circuit, repetitions=5))</p>
+<blockquote>
+<div><p>0</p>
+</div></blockquote>
+<p>0   0
+1   0
+2   0
+3   1
+4   1</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.Sampler.run_sweep">
+<span class="sig-name descname"><span class="pre">run_sweep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">program</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AbstractCircuit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">ParamResolver</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Basic</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Basic</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Sweep</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">_Sweepable</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repetitions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">ResultDict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cirq_superstaq.Sampler.run_sweep" title="Permalink to this definition"></a></dt>
+<dd><p>Runs a sweep for the given Circuit. Note that this creates jobs for each of the sweeps in
+the given sweepable, and then blocks until all of jobs are complete.</p>
+<dl class="simple">
+<dt>Ags:</dt><dd><p>program: The circuit to sample from.
+params: The parameters to run with program.
+repetitions: The number of times to sample.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A list of Cirq results, one for each parameter resolver.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cirq_superstaq.Service">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cirq_superstaq.</span></span><span class="sig-name descname"><span class="pre">Service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_host</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'v0.1.0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_retry_seconds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3600</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cirq_superstaq.Service" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Finance</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Logistics</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">UserConfig</span></code></p>
+<p>A class to access SuperstaQ’s API.</p>
+<p>To access the API, this class requires a remote host url and an API key. These can be
+specified in the constructor via the parameters <cite>remote_host</cite> and <cite>api_key</cite>. Alternatively
+these can be specified by setting the environment variables <cite>SUPERSTAQ_REMOTE_HOST</cite> and
+<cite>SUPERSTAQ_API_KEY</cite>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.Service.aqt_compile">
+<span class="sig-name descname"><span class="pre">aqt_compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'aqt_keysight_qpu'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cirq_superstaq.compiler_output.CompilerOutput" title="cirq_superstaq.compiler_output.CompilerOutput"><span class="pre">CompilerOutput</span></a></span></span><a class="headerlink" href="#cirq_superstaq.Service.aqt_compile" title="Permalink to this definition"></a></dt>
+<dd><p>Compiles the given circuit(s) to target AQT device, optimized to its native gate set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>circuits</strong> – cirq Circuit(s) to compile.</p></li>
+<li><p><strong>target</strong> – string of target backend AQT device.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>object whose .circuit(s) attribute is an optimized cirq Circuit(s)
+If qtrl is installed, the object’s .seq attribute is a qtrl Sequence object of the
+pulse sequence corresponding to the optimized cirq.Circuit(s) and the
+.pulse_list(s) attribute is the list(s) of cycles.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.Service.aqt_compile_eca">
+<span class="sig-name descname"><span class="pre">aqt_compile_eca</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Circuit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_equivalent_circuits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'aqt_keysight_qpu'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cirq_superstaq.compiler_output.CompilerOutput" title="cirq_superstaq.compiler_output.CompilerOutput"><span class="pre">CompilerOutput</span></a></span></span><a class="headerlink" href="#cirq_superstaq.Service.aqt_compile_eca" title="Permalink to this definition"></a></dt>
+<dd><p>Compiles the given circuit to target AQT device with Equivalent Circuit Averaging (ECA).</p>
+<p>See arxiv.org/pdf/2111.04572.pdf for a description of ECA.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>circuit</strong> – cirq Circuit to compile.</p></li>
+<li><p><strong>num_equivalent_circuits</strong> – number of logically equivalent random circuits to generate.</p></li>
+<li><p><strong>random_seed</strong> – optional seed for circuit randomizer.</p></li>
+<li><p><strong>target</strong> – string of target backend AQT device.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>object whose .circuits attribute is a list of logically equivalent cirq Circuit(s).
+If qtrl is installed, the object’s .seq attribute is a qtrl Sequence object of the
+pulse sequence corresponding to the cirq.Circuits and the .pulse_list(s) attribute is
+the list(s) of cycles.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.Service.cq_compile">
+<span class="sig-name descname"><span class="pre">cq_compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'cq_hilbert_qpu'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cirq_superstaq.compiler_output.CompilerOutput" title="cirq_superstaq.compiler_output.CompilerOutput"><span class="pre">CompilerOutput</span></a></span></span><a class="headerlink" href="#cirq_superstaq.Service.cq_compile" title="Permalink to this definition"></a></dt>
+<dd><p>Compiles the given circuit(s) to given target CQ device, optimized to its native gate
+set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>circuits</strong> – cirq Circuit(s) with operations on qubits 0 and 1.</p></li>
+<li><p><strong>target</strong> – string of target backend CQ device.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>object whose .circuit(s) attribute is an optimized cirq Circuit(s)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.Service.create_job">
+<span class="sig-name descname"><span class="pre">create_job</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AbstractCircuit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repetitions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ibmq_pulse</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cirq_superstaq.job.Job" title="cirq_superstaq.job.Job"><span class="pre">Job</span></a></span></span><a class="headerlink" href="#cirq_superstaq.Service.create_job" title="Permalink to this definition"></a></dt>
+<dd><p>Create a new job to run the given circuit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>circuit</strong> – The circuit to run.</p></li>
+<li><p><strong>repetitions</strong> – The number of times to repeat the circuit. Defaults to 1000.</p></li>
+<li><p><strong>target</strong> – Where to run the job.</p></li>
+<li><p><strong>ibmq_pulse</strong> – Specify whether to run the job using SuperstaQ’s pulse-level optimizations.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>css.Job</cite> which can be queried for status or results.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ValueError</strong> – If the circuit has no measurements to sample.</p></li>
+<li><p><strong>SuperstaQException</strong> – If there was an error accessing the API.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.Service.get_backends">
+<span class="sig-name descname"><span class="pre">get_backends</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#cirq_superstaq.Service.get_backends" title="Permalink to this definition"></a></dt>
+<dd><p>Get list of available backends.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.Service.get_balance">
+<span class="sig-name descname"><span class="pre">get_balance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretty_output</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cirq_superstaq.Service.get_balance" title="Permalink to this definition"></a></dt>
+<dd><p>Get the querying user’s account balance in USD.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pretty_output</strong> – whether to return a pretty string or a float of the balance.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>If pretty_output is True, returns the balance as a nicely formatted string ($-prefix,</dt><dd><p>commas on LHS every three digits, and two digits after period). Otherwise, simply
+returns a float of the balance.</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.Service.get_counts">
+<span class="sig-name descname"><span class="pre">get_counts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Circuit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repetitions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ibmq_pulse</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_resolver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">ParamResolver</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Basic</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Basic</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">cirq.ParamResolver({})</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Counter</span></span></span><a class="headerlink" href="#cirq_superstaq.Service.get_counts" title="Permalink to this definition"></a></dt>
+<dd><p>Runs the given circuit on the SuperstaQ API and returns the result
+of the ran circuit as a collections.Counter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>circuit</strong> – The circuit to run.</p></li>
+<li><p><strong>repetitions</strong> – The number of times to run the circuit.</p></li>
+<li><p><strong>target</strong> – Where to run the job.</p></li>
+<li><p><strong>param_resolver</strong> – A <cite>cirq.ParamResolver</cite> to resolve parameters in  <cite>circuit</cite>.</p></li>
+<li><p><strong>ibmq_pulse</strong> – Specify whether to run the job using SuperstaQ’s pulse-level optimizations.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>collection.Counter</cite> for running the circuit.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.Service.get_job">
+<span class="sig-name descname"><span class="pre">get_job</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">job_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cirq_superstaq.job.Job" title="cirq_superstaq.job.Job"><span class="pre">Job</span></a></span></span><a class="headerlink" href="#cirq_superstaq.Service.get_job" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a job that has been created on the SuperstaQ API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>job_id</strong> – The UUID of the job. Jobs are assigned these numbers by the server during the</p></li>
+<li><p><strong>job.</strong> (<em>creation of the</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>css.Job</cite> which can be queried for status or results.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>SuperstaQNotFoundException</strong> – If there was no job with the given <cite>job_id</cite>.</p></li>
+<li><p><strong>SuperstaQException</strong> – If there was an error accessing the API.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.Service.ibmq_compile">
+<span class="sig-name descname"><span class="pre">ibmq_compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ibmq_qasm_simulator'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cirq_superstaq.compiler_output.CompilerOutput" title="cirq_superstaq.compiler_output.CompilerOutput"><span class="pre">CompilerOutput</span></a></span></span><a class="headerlink" href="#cirq_superstaq.Service.ibmq_compile" title="Permalink to this definition"></a></dt>
+<dd><p>Returns pulse schedule for the given circuit and target.</p>
+<p>Qiskit Terra must be installed to correctly deserialize the returned pulse schedule.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.Service.neutral_atom_compile">
+<span class="sig-name descname"><span class="pre">neutral_atom_compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'neutral_atom_qpu'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#cirq_superstaq.Service.neutral_atom_compile" title="Permalink to this definition"></a></dt>
+<dd><p>Returns pulse schedule for the given circuit and target.</p>
+<p>Pulse must be installed for returned object to correctly deserialize to a pulse schedule.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.Service.qscout_compile">
+<span class="sig-name descname"><span class="pre">qscout_compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirror_swaps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'sandia_qscout_qpu'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cirq_superstaq.compiler_output.CompilerOutput" title="cirq_superstaq.compiler_output.CompilerOutput"><span class="pre">CompilerOutput</span></a></span></span><a class="headerlink" href="#cirq_superstaq.Service.qscout_compile" title="Permalink to this definition"></a></dt>
+<dd><p>Compiles the given circuit(s) to target QSCOUT device, optimized to its native gate set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>circuits</strong> – cirq Circuit(s) with operations on qubits 0 and 1.</p></li>
+<li><p><strong>target</strong> – string of target backend QSCOUT device.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>object whose .circuit(s) attribute is an optimized cirq Circuit(s)
+and a list of jaqal programs represented as strings</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.Service.resource_estimate">
+<span class="sig-name descname"><span class="pre">resource_estimate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Circuit</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">ResourceEstimate</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">ResourceEstimate</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cirq_superstaq.Service.resource_estimate" title="Permalink to this definition"></a></dt>
+<dd><p>Generates resource estimates for circuit(s).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>circuits</strong> – cirq Circuit(s).</p></li>
+<li><p><strong>target</strong> – string of target representing backend device</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ResourceEstimate(s) containing resource costs (after compilation)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.Service.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Circuit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repetitions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ibmq_pulse</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_resolver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ParamResolver</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">cirq.ParamResolver({})</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ResultDict</span></span></span><a class="headerlink" href="#cirq_superstaq.Service.run" title="Permalink to this definition"></a></dt>
+<dd><p>Run the given circuit on the SuperstaQ API and returns the result
+of the ran circut as a cirq.ResultDict.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>circuit</strong> – The circuit to run.</p></li>
+<li><p><strong>repetitions</strong> – The number of times to run the circuit.</p></li>
+<li><p><strong>target</strong> – Where to run the job.</p></li>
+<li><p><strong>ibmq_pulse</strong> – Specify whether to run the job using SuperstaQ’s pulse-level optimizations.</p></li>
+<li><p><strong>param_resolver</strong> – A <cite>cirq.ParamResolver</cite> to resolve parameters in  <cite>circuit</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>cirq.ResultDict</cite> for running the circuit.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.Service.sampler">
+<span class="sig-name descname"><span class="pre">sampler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Sampler</span></span></span><a class="headerlink" href="#cirq_superstaq.Service.sampler" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a <cite>cirq.Sampler</cite> object for accessing sampler interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>target</strong> – Backend to sample against.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>cirq.Sampler</cite> for the SuperstaQ API.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cirq_superstaq.ZXPowGate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cirq_superstaq.</span></span><span class="sig-name descname"><span class="pre">ZXPowGate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exponent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Basic</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_shift</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cirq_superstaq.ZXPowGate" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">EigenGate</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Gate</span></code></p>
+<p>The ZX-parity gate, possibly raised to a power.
+Per arxiv.org/pdf/1904.06560v3 eq. 135, the ZX**t gate implements the following unitary:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\begin{split}e^{-\frac{i\pi}{2} t Z \otimes X} = \begin{bmatrix}
+                                c &amp; -s &amp; . &amp; . \\
+                                -s &amp; c &amp; . &amp; . \\
+                                . &amp; . &amp; c &amp; s \\
+                                . &amp; . &amp; s &amp; c \\
+                                \end{bmatrix}\end{split}\]</div>
+</div></blockquote>
+<p>where ‘.’ means ‘0’ and <span class="math notranslate nohighlight">\(c = \cos(\frac{\pi t}{2})\)</span>
+and <span class="math notranslate nohighlight">\(s = i \sin(\frac{\pi t}{2})\)</span>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.ZXPowGate.num_qubits">
+<span class="sig-name descname"><span class="pre">num_qubits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#cirq_superstaq.ZXPowGate.num_qubits" title="Permalink to this definition"></a></dt>
+<dd><p>The number of qubits this gate acts on.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cirq_superstaq.ZZSwapGate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cirq_superstaq.</span></span><span class="sig-name descname"><span class="pre">ZZSwapGate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Basic</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cirq_superstaq.ZZSwapGate" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Gate</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">InterchangeableQubitsGate</span></code></p>
+<p>The ZZ-SWAP gate, which performs the ZZ-interaction followed by a SWAP.</p>
+<p>ZZ-SWAPs are useful for applications like QAOA or Hamiltonian Simulation,
+particularly on linear- or low- connectivity devices. See <a class="reference external" href="https://arxiv.org/pdf/2004.14970.pdf">https://arxiv.org/pdf/2004.14970.pdf</a>
+for an application of ZZ SWAP networks.</p>
+<p>The unitary for a ZZ-SWAP gate parametrized by ZZ-interaction angle <span class="math notranslate nohighlight">\(\theta\)</span> is:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+1 &amp; . &amp; . &amp; . \\
+. &amp; . &amp; e^{i \theta} &amp; . \\
+. &amp; e^{i \theta} &amp; . &amp; . \\
+. &amp; . &amp; . &amp; 1 \\
+\end{bmatrix}\end{split}\]</div>
+</div></blockquote>
+<p>where ‘.’ means ‘0’.
+For <span class="math notranslate nohighlight">\(\theta = 0\)</span>, the ZZ-SWAP gate is just an ordinary SWAP.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cirq_superstaq.ZZSwapGate.num_qubits">
+<span class="sig-name descname"><span class="pre">num_qubits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#cirq_superstaq.ZZSwapGate.num_qubits" title="Permalink to this definition"></a></dt>
+<dd><p>The number of qubits this gate acts on.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cirq_superstaq.barrier">
+<span class="sig-prename descclassname"><span class="pre">cirq_superstaq.</span></span><span class="sig-name descname"><span class="pre">barrier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">qubits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Qid</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Operation</span></span></span><a class="headerlink" href="#cirq_superstaq.barrier" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Test’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, SLee.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
